@@ -135,7 +135,6 @@
 # For wcnss service
 /dev/wcnss_wlan		u:object_r:wcnss_ctrl:s0
 
-/sys/devices/virtual/input/lge_touch/keypad_enable     u:object_r:sysfs_writable:s0
 /sys/devices/virtual/input/lge_touch(/.*)?          u:object_r:touchpanel_sysfs:s0
 
 # Hardware tunables
