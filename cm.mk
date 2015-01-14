@@ -9,16 +9,16 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lge/geeb/full_geeb.mk)
+$(call inherit-product, device/lge/geehrc/full_geehrc.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := geeb
-PRODUCT_NAME := cm_geeb
-PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG Optimus G
+PRODUCT_DEVICE := geehrc
+PRODUCT_NAME := cm_geehrc
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LGE
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occam/geeb:5.0.1/LRX22C/1602158:user/release-keys PRIVATE_BUILD_DESC="occam-user 5.0.1 LRX22C 1602158 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occam/geehrc:5.0.1/LRX22C/1602158:user/release-keys PRIVATE_BUILD_DESC="occam-user 5.0.1 LRX22C 1602158 release-keys"
 
 # Enable Torch
 PRODUCT_PACKAGES += Torch

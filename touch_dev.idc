@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #
-# Input Device Calibration File for the geeb touch screen.
+# Input Device Calibration File for the geehrc touch screen.
 #
 
 device.internal = 1

@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to ALL geeb devices, and
-# are also specific to geeb devices
+# This file includes all definitions that apply to ALL geehrc devices, and
+# are also specific to geehrc devices
 #
 # Everything in this directory will become public
 
-DEVICE_PACKAGE_OVERLAYS := device/lge/geeb/overlay
+DEVICE_PACKAGE_OVERLAYS := device/lge/geehrc/overlay
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -28,8 +28,8 @@ DEVICE_PACKAGE_OVERLAYS := device/lge/geeb/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-PRODUCT_PACKAGES += \
-    lights.geeb \
+PRODUCT_PACKAGES := \
+    lights.geehrc \
     libwpa_client \
     hostapd \
     dhcpcd.conf \
@@ -48,50 +48,47 @@ PRODUCT_PACKAGES += \
 
 # Script for baseband name resolution
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/fetch-swv:system/bin/fetch-swv
+        device/lge/geehrc/fetch-swv:system/bin/fetch-swv
 
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
-	device/lge/geeb/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-	device/lge/geeb/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-	device/lge/geeb/init.geeb.wifi.sh:system/etc/init.geeb.wifi.sh
+	device/lge/geehrc/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
+	device/lge/geehrc/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+	device/lge/geehrc/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+	device/lge/geehrc/init.geehrc.wifi.sh:system/etc/init.geehrc.wifi.sh
 
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/audio_policy.conf:system/etc/audio_policy.conf
+	device/lge/geehrc/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/mixer_paths.xml:system/etc/mixer_paths.xml
+	device/lge/geehrc/mixer_paths.xml:system/etc/mixer_paths.xml
 
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/thermald-geeb.conf:system/etc/thermald.conf
-
-PRODUCT_COPY_FILES += \
-	device/lge/geeb/init.geeb.rc:root/init.geeb.rc \
-	device/lge/geeb/init.geeb.usb.rc:root/init.geeb.usb.rc \
-	device/lge/geeb/fstab.geeb:root/fstab.geeb \
-	device/lge/geeb/ueventd.geeb.rc:root/ueventd.geeb.rc \
-	device/lge/geeb/media_profiles.xml:system/etc/media_profiles.xml \
+	device/lge/geehrc/init.geehrc.rc:root/init.geehrc.rc \
+	device/lge/geehrc/init.geehrc.usb.rc:root/init.geehrc.usb.rc \
+	device/lge/geehrc/fstab.geehrc:root/fstab.geehrc \
+	device/lge/geehrc/ueventd.geehrc.rc:root/ueventd.geehrc.rc \
+	device/lge/geehrc/media_profiles.xml:system/etc/media_profiles.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
-	device/lge/geeb/media_codecs.xml:system/etc/media_codecs.xml
+	device/lge/geehrc/media_codecs.xml:system/etc/media_codecs.xml
 
 # Prebuilt kl and kcm keymaps
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
-	device/lge/geeb/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
-	device/lge/geeb/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
-	device/lge/geeb/keypad_8064.kl:system/usr/keylayout/keypad_8064.kl \
-	device/lge/geeb/apq8064-tabla-snd-card_Button_Jack.kcm:system/usr/keychars/apq8064-tabla-snd-card_Button_Jack.kcm \
-	device/lge/geeb/hs_detect.kcm:system/usr/keychars/hs_detect.kcm \
-	device/lge/geeb/keypad_8064.kcm:system/usr/keychars/keypad_8064.kcm \
-	device/lge/geeb/pmic8xxx_pwrkey.kcm:system/usr/keychars/pmic8xxx_pwrkey.kcm
+	device/lge/geehrc/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
+	device/lge/geehrc/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
+	device/lge/geehrc/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
+	device/lge/geehrc/keypad_8064.kl:system/usr/keylayout/keypad_8064.kl \
+	device/lge/geehrc/apq8064-tabla-snd-card_Button_Jack.kcm:system/usr/keychars/apq8064-tabla-snd-card_Button_Jack.kcm \
+	device/lge/geehrc/hs_detect.kcm:system/usr/keychars/hs_detect.kcm \
+	device/lge/geehrc/keypad_8064.kcm:system/usr/keychars/keypad_8064.kcm \
+	device/lge/geehrc/pmic8xxx_pwrkey.kcm:system/usr/keychars/pmic8xxx_pwrkey.kcm
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/touch_dev.idc:system/usr/idc/touch_dev.idc \
-	device/lge/geeb/touch_dev.kl:system/usr/keylayout/touch_dev.kl
+	device/lge/geehrc/touch_dev.idc:system/usr/idc/touch_dev.idc \
+	device/lge/geehrc/touch_dev.kl:system/usr/keylayout/touch_dev.kl
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -109,6 +106,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
 	frameworks/native/data/etc/android.software.print.xml:system/etc/permissions/android.software.print.xml \
 	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+        frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
 	frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -167,6 +165,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Upto 3 layers can go through overlays
 PRODUCT_PROPERTY_OVERRIDES += persist.hwc.mdpcomp.enable=true
 
+# Force older camera API.
+PRODUCT_PROPERTY_OVERRIDES += \
+	camera2.portability.force_api=1
+
+PRODUCT_CHARACTERISTICS := nosdcard
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
@@ -195,7 +199,7 @@ PRODUCT_PACKAGES += \
 # Voice processing
 PRODUCT_PACKAGES += libqcomvoiceprocessing
 PRODUCT_COPY_FILES += \
-    device/lge/geeb/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    device/lge/geehrc/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
 	hci_qcomm_init
@@ -204,20 +208,15 @@ PRODUCT_PACKAGES += \
 	power.msm8960
 
 PRODUCT_COPY_FILES += \
-	device/lge/geeb/init.geeb.bt.sh:system/etc/init.geeb.bt.sh
+	device/lge/geehrc/init.geehrc.bt.sh:system/etc/init.geehrc.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
 
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-	camera.geeb \
-	camera.msm8960 \
-	libmmcamera_interface2 \
-	libmmcamera_interface
 
 PRODUCT_PACKAGES += \
-	libmm-omxcore \
+        libmm-omxcore \
 	libdivxdrmdecrypt \
 	libOmxVdec \
 	libOmxVenc \
@@ -228,7 +227,7 @@ endif
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-        device/lge/geeb/gps.conf:system/etc/gps.conf
+        device/lge/geehrc/gps.conf:system/etc/gps.conf
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -252,18 +251,20 @@ PRODUCT_PACKAGES += \
 	keystore.msm8960
 
 PRODUCT_PACKAGES += \
-        hostapd_default.conf \
-        wpa_supplicant_overlay.conf \
-        p2p_supplicant_overlay.conf
+	hostapd_default.conf \
+	wpa_supplicant_overlay.conf \
+	p2p_supplicant_overlay.conf
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        telephony.lteOnCdmaDevice=0 \
+	 telephony.lteOnCdmaDevice=1 \
         telephony.lteOnGsmDevice=1 \
-        ro.telephony.default_network=9
-
+        ro.telephony.default_network=10 \
+        ro.ril.def.preferred.network=10 \
+	 ril.subscription.types=NV,RUIM
+         
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
@@ -271,7 +272,7 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
-	wifi.supplicant_scan_interval=120
+	wifi.supplicant_scan_interval=15
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -302,7 +303,7 @@ PRODUCT_PACKAGES += qrngd
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
-# This is the geeb-specific audio package
-# $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage10.mk)
+# This is the geehrc-specific audio package
+# $(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
 
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
