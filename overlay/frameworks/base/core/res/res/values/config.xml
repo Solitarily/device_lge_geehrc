@@ -22,14 +22,14 @@
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">true</bool>
 
-    <!-- Default color for notification LED is RED. -->
-    <color name="config_defaultNotificationColor">#ff0000</color>
+    <!-- Default color for notification LED is white. -->
+    <color name="config_defaultNotificationColor">#ffffffff</color>
 
     <!-- Default LED on time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOn">500</integer>
+    <integer name="config_defaultNotificationLedOn">1000</integer>
 
     <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">2000</integer>
+    <integer name="config_defaultNotificationLedOff">9000</integer>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -236,7 +236,7 @@
          If the span is equal to or greater than this size, a scaling gesture
          will begin, where supported. (See android.view.ScaleGestureDetector)
 
-         This value has been tuned for the "geeb" device. -->
+         This value has been tuned for the "geehrc" device. -->
     <dimen name="config_minScalingSpan">35mm</dimen>
 
     <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem

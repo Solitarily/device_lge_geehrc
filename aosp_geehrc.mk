@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product, device/lge/geeb/full_geeb.mk)
+$(call inherit-product, device/lge/geehrc/full_geehrc.mk)
 
-PRODUCT_NAME := aosp_geeb
+PRODUCT_NAME := aosp_geehrc
 
 PRODUCT_PACKAGES += \
     Launcher3
