@@ -135,5 +135,4 @@
 /sys/module/pm2/modes(/.*)?            u:object_r:sysfs_mpdecision:s0
 /sys/module/pm_8x60/modes(/.*)?        u:object_r:sysfs_mpdecision:s0
 
-/sys/devices/virtual/input/lge_touch/keypad_enable     u:object_r:sysfs_writable:s0
 
